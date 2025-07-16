@@ -154,17 +154,7 @@ Our method achieves superior performance compared to SOTA methods under large vi
 - **Quantitative Evaluation**: Improved metrics on viewpoint variation scenarios
 - **User Studies**: Preferred by users for realistic viewpoint transitions
 
-### Multiple Reference Images and Target Video Share Different Viewpoints
-
-<div align="center">
-<img src="assets/results_viewpoints.png" width="90%">
-</div>
-
-### Different Viewpoints Provide More Diverse Information
-
-<div align="center">
-<img src="assets/diverse_viewpoints.png" width="90%">
-</div>
+For detailed experimental results and visual comparisons, please refer to our [project page](https://harlanhong.github.io/publications/fvhuman/index.html) and the full paper.
 
 ## 📚 Citation
 

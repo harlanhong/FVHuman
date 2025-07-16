@@ -10,9 +10,7 @@ This directory contains all the visual assets used in the main README.
 - `comparison_video.mp4` - Video demonstration comparing with other methods
 
 ✅ **Placeholder files (using teaser image):**
-- `qualitative_comparison.png` - Comparison results with other methods  
-- `results_viewpoints.png` - Results showing multiple reference images and different viewpoints
-- `diverse_viewpoints.png` - Examples of how different viewpoints provide diverse information
+- `qualitative_comparison.png` - Comparison results with other methods
 
 ## File Sources
 
@@ -23,4 +21,5 @@ This directory contains all the visual assets used in the main README.
 
 - Both JPG and PNG/GIF versions are provided for compatibility
 - The comparison video (5.2MB) shows method comparisons
-- Placeholder images should be replaced with actual results when available 
+- Some placeholder result images were removed to avoid misrepresentation
+- For detailed experimental results, users are directed to the project page 

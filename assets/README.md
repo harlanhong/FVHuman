@@ -2,23 +2,25 @@
 
 This directory contains all the visual assets used in the main README.
 
-## Required Files
+## Available Files
 
-Please place the following files in this directory:
+✅ **Downloaded from project page:**
+- `teaser.jpg` / `teaser.gif` - Main demo image showing free-viewpoint human animation
+- `method_overview.jpg` / `method_overview.png` - Framework architecture illustration
+- `comparison_video.mp4` - Video demonstration comparing with other methods
 
-- `teaser.gif` - Main demo animation showing free-viewpoint human animation
-- `qualitative_comparison.png` - Comparison results with other methods
-- `method_overview.png` - Framework architecture illustration
+✅ **Placeholder files (using teaser image):**
+- `qualitative_comparison.png` - Comparison results with other methods  
 - `results_viewpoints.png` - Results showing multiple reference images and different viewpoints
 - `diverse_viewpoints.png` - Examples of how different viewpoints provide diverse information
 
 ## File Sources
 
-These images can be downloaded from the [project page](https://harlanhong.github.io/publications/fvhuman/index.html) or generated from your experimental results.
+- Main images downloaded from: [project page](https://harlanhong.github.io/publications/fvhuman/index.html)
+- Placeholder images can be replaced with actual result figures from your experiments
 
-## Recommended Specifications
+## Notes
 
-- **Image format**: PNG or JPG
-- **GIF format**: For animations
-- **Resolution**: High enough for clear viewing on GitHub (typically 1000px+ width)
-- **File size**: Keep under 10MB per file for fast loading 
+- Both JPG and PNG/GIF versions are provided for compatibility
+- The comparison video (5.2MB) shows method comparisons
+- Placeholder images should be replaced with actual results when available 

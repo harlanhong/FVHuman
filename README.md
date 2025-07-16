@@ -23,16 +23,13 @@
 
 ### Video Demo
 
-For video demonstrations, please check out our [project page](https://harlanhong.github.io/publications/fvhuman/index.html) for high-quality video results.
-
-<!-- Uncomment when you have videos -->
-<!-- 
 <div align="center">
-<video src="assets/demo_video.mp4" width="80%" controls>
+<video src="assets/comparison_video.mp4" width="80%" controls>
 Your browser does not support the video tag.
 </video>
 </div>
--->
+
+For more video demonstrations, please check out our [project page](https://harlanhong.github.io/publications/fvhuman/index.html) for additional high-quality video results.
 
 ### Qualitative Comparison
 

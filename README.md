@@ -29,13 +29,7 @@ Your browser does not support the video tag.
 </video>
 </div>
 
-For more video demonstrations, please check out our [project page](https://harlanhong.github.io/publications/fvhuman/index.html) for additional high-quality video results.
-
-### Qualitative Comparison
-
-<div align="center">
-<img src="assets/qualitative_comparison.png" width="90%">
-</div>
+For more video demonstrations and qualitative comparisons, please check out our [project page](https://harlanhong.github.io/publications/fvhuman/index.html) for additional high-quality video results and detailed experimental analysis.
 
 ## 📖 Abstract
 

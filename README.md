@@ -13,6 +13,33 @@
 
 </div>
 
+## 🎬 Demo
+
+**FVHuman is able to generate free-viewpoint human videos from multiple images.**
+
+<div align="center">
+<img src="assets/teaser.gif" width="80%">
+</div>
+
+### Video Demo
+
+For video demonstrations, please check out our [project page](https://harlanhong.github.io/publications/fvhuman/index.html) for high-quality video results.
+
+<!-- Uncomment when you have videos -->
+<!-- 
+<div align="center">
+<video src="assets/demo_video.mp4" width="80%" controls>
+Your browser does not support the video tag.
+</video>
+</div>
+-->
+
+### Qualitative Comparison
+
+<div align="center">
+<img src="assets/qualitative_comparison.png" width="90%">
+</div>
+
 ## 📖 Abstract
 
 Diffusion-based human animation aims to animate a human character based on a source human image as well as driving signals such as a sequence of poses. Leveraging the generative capacity of diffusion model, existing approaches are able to generate high-fidelity poses, but struggle with significant viewpoint changes, especially in zoom-in/zoom-out scenarios where camera-character distance varies. This limits the applications such as cinematic shot type plan or camera control. 
@@ -109,6 +136,12 @@ data/
 
 ## 📝 Model Architecture
 
+<div align="center">
+<img src="assets/method_overview.png" width="95%">
+</div>
+
+The illustration of our framework. Our framework feeds a reference set into reference UNet to extract the reference feature. To filter out the redundant information in reference features set, we propose a pose correlation guider to create a correlation map to indicate the informative region of the reference spatially. Moreover, we adopt a reference selection strategy to pick up the informative tokens from the reference feature set according to the correlation map and pass them to the following modules.
+
 Our framework consists of:
 
 1. **Reference UNet**: Extracts reference features from multiple input images
@@ -123,6 +156,18 @@ Our method achieves superior performance compared to SOTA methods under large vi
 - **Qualitative Results**: High-fidelity human animation with diverse viewpoints
 - **Quantitative Evaluation**: Improved metrics on viewpoint variation scenarios
 - **User Studies**: Preferred by users for realistic viewpoint transitions
+
+### Multiple Reference Images and Target Video Share Different Viewpoints
+
+<div align="center">
+<img src="assets/results_viewpoints.png" width="90%">
+</div>
+
+### Different Viewpoints Provide More Diverse Information
+
+<div align="center">
+<img src="assets/diverse_viewpoints.png" width="90%">
+</div>
 
 ## 📚 Citation
 

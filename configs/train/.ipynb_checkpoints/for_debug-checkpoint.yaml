@@ -1,0 +1,70 @@
+# 
+wandb_project: 'debug'
+wandb_entity: 'liu1997'
+wandb_key: "91fe156c60374c4eb00dd6a990017b0371e32737"
+exp_name: 'debug'
+output_dir: '/sensei-fs/users/haiyangl/diffusion_weights'
+wandb_log_dir: '/mnt/localssd/outputs/wandb'
+seed: 42
+resume_from_checkpoint: ''
+
+data:
+  train_bs: 1
+  meta_paths:
+    - "/sensei-fs/users/haiyangl/pose2video/data/champ_dance_meta.json"
+  image_size: 64
+  aug_type: "RandomCrop"
+  sample_margin: 30
+
+validation:
+  val_loss_steps: 250
+  validation_steps: 1000
+  guidance_scale: 3.5
+  denoising_steps: 20 
+  fix_tgt_pose_video: "/mnt/localssd/champ_trainning_sample/rawdata/_dwpose/8553c6b557481352cdf49d145255dfed.mp4"         
+  fix_tgt_pose_index: 60
+  
+solver:
+  gradient_accumulation_steps: 1
+  mixed_precision: 'fp16'
+  enable_xformers_memory_efficient_attention: True 
+  gradient_checkpointing: False 
+  max_train_steps: 2  # 50000
+  max_grad_norm: 1.0
+  # lr
+  learning_rate: 1.0e-5
+  scale_lr: False 
+  lr_warmup_steps: 1
+  lr_scheduler: 'constant'
+
+  # optimizer
+  use_8bit_adam: True 
+  adam_beta1: 0.9
+  adam_beta2: 0.999
+  adam_weight_decay:  1.0e-2
+  adam_epsilon: 1.0e-8
+
+noise_scheduler_kwargs:
+  num_train_timesteps: 1000
+  beta_start:          0.00085
+  beta_end:            0.012
+  beta_schedule:       "scaled_linear"
+  steps_offset:        1
+  clip_sample:         false
+
+guidance_encoder_kwargs:
+  guidance_embedding_channels: 320
+  guidance_input_channels: 3
+  block_out_channels: [16, 32, 96, 256]
+
+base_model_path: '/mnt/localssd/pretrained_weights/stable-diffusion-v1-5'
+vae_model_path: '/mnt/localssd/pretrained_weights/sd-vae-ft-mse'
+image_encoder_path: '/mnt/localssd/pretrained_weights/image_encoder'
+controlnet_openpose_path: '/mnt/localssd/pretrained_weights/control_v11p_sd15_openpose/diffusion_pytorch_model.bin'
+pose_guider_pretrain: True
+
+weight_dtype: 'fp16'  # [fp16, fp32]
+uncond_ratio: 0.1
+noise_offset: 0.05
+snr_gamma: 5.0
+enable_zero_snr: True 

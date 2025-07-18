@@ -62,36 +62,44 @@ pip install -r requirements.txt
 
 ## 🚀 Quick Start
 
-### Inference
+### Training
+
+Training consists of two stages. You can specify the GPU device using `CUDA_VISIBLE_DEVICES`:
+
+**Stage 1:**
+```bash
+CUDA_VISIBLE_DEVICES=1 accelerate launch train_s1.py --config config_s1.yaml --exp_name stage1
+```
+
+**Stage 2:**
+```bash
+CUDA_VISIBLE_DEVICES=1 accelerate launch train_s2.py --config config_s2.yaml --exp_name stage2
+```
+
+### Testing
+
+Run inference with trained models:
 
 ```bash
-# Run inference with multiple reference images
-python inference.py \
-    --reference_images path/to/reference/images \
-    --target_poses path/to/target/poses \
-    --output_dir path/to/output \
-    --config configs/inference.yaml
+CUDA_VISIBLE_DEVICES=5 python inference_video_full.py \
+    --config configs/inference/inference_ted.yaml \
+    --checkpoint_path state2_ted_full/net-40000.pth \
+    --save_name user_test/rst.mp4
 ```
 
-### Example Usage
+### Configuration Files
 
-```python
-from fvhuman import FVHumanModel
+Make sure you have the proper configuration files:
+- `config_s1.yaml` - Stage 1 training configuration
+- `config_s2.yaml` - Stage 2 training configuration  
+- `configs/inference/inference_ted.yaml` - Inference configuration
 
-# Load pre-trained model
-model = FVHumanModel.from_pretrained("path/to/checkpoint")
+### Model Checkpoints
 
-# Prepare inputs
-reference_images = ["ref1.jpg", "ref2.jpg", "ref3.jpg"]
-target_poses = "path/to/pose_sequence.json"
+The trained model checkpoint should be placed at:
+- `state2_ted_full/net-40000.pth` - Stage 2 trained model
 
-# Generate animation
-output_video = model.animate(
-    reference_images=reference_images,
-    target_poses=target_poses,
-    viewpoint_change="large"  # Options: "small", "medium", "large"
-)
-```
+
 
 ## 📊 MSTed Dataset
 

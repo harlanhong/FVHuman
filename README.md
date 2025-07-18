@@ -96,6 +96,8 @@ Make sure you have the proper configuration files:
 
 ### Model Checkpoints
 
+Download the pre-trained model checkpoints from: **[Checkpoint Download Link](https://hkustconnect-my.sharepoint.com/:f:/g/personal/fhongac_connect_ust_hk/EsoVTh7Kim1Mk4QLCgFZ9NsBH921l1cjNi7evjqPnwvx5w?e=hIIihp)**
+
 The trained model checkpoint should be placed at:
 - `state2_ted_full/net-40000.pth` - Stage 2 trained model
 
